@@ -3,7 +3,7 @@
 <title>Penang Postcard — Interactive Itinerary</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
 <style>
 :root{--ink:#1c4362;--muted:#69879a;--blue:#32b1db;--sea:#b9eafa;--sun:#ffd65a;--orange:#ff9957;--cream:#fffdf7;--edge:#d8eaf0;--bg:#f1f9fb;--shadow:0 16px 45px rgba(30,100,130,.09)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans','Noto Sans Thai',sans-serif}button,a{font:inherit}button{cursor:pointer}a{color:inherit}button:focus-visible,a:focus-visible{outline:3px solid #ffae5e;outline-offset:3px}
@@ -56,6 +56,24 @@ body{background:radial-gradient(circle at 5% 10%,#e8f8ff,transparent 36%),radial
 @media(min-width:1200px){.layout{grid-template-columns:minmax(0,1.3fr) minmax(450px,.7fr)}}
 @media(max-width:1000px){.layout{grid-template-columns:1fr}.right{display:flex}.route{max-height:none}#map{height:560px}}
 @media(max-width:680px){#map{height:490px}.route{padding:19px 16px}.entry{grid-template-columns:78px 15px 1fr;gap:7px}.map-switch-hint{width:100%;margin-left:0}.hero h1{font-size:34px}}
+
+/* Handcrafted illustrated map: offline, no tile provider */
+#map{height:auto;min-height:0;background:#aee6f2;overflow:hidden;position:relative;aspect-ratio: 1.1}
+#map .map-art{display:block;width:100%;height:100%;min-height:560px}
+.map-pin{cursor:pointer;outline:none;filter:drop-shadow(0 5px 3px #2b657342);transition:transform .18s;transform-box:fill-box;transform-origin:center}
+.map-pin:hover,.map-pin:focus-visible{transform:translateY(-8px) scale(1.1)}
+.map-pin .pin-circle{fill:#fffdf5;stroke:#fff;stroke-width:4}
+.map-pin.selected .pin-circle{fill:#ffe18a;stroke:#fff;stroke-width:5}
+.map-pin .pin-count{fill:#f38e55}.map-pin.visited .pin-circle{fill:#b9ebd2}
+.map-pin text{font-family:'DM Sans','Noto Sans Thai',sans-serif}
+.route-path{stroke-dasharray:7 11;animation:route-move 22s linear infinite}
+@keyframes route-move{to{stroke-dashoffset:-360}}
+.map-water-wave{animation:wave-drift 12s ease-in-out infinite alternate}@keyframes wave-drift{to{transform:translate(12px,0)}}
+.map-label-svg{font-family:'DM Sans','Noto Sans Thai',sans-serif;fill:#46798c;font-size:13px;font-weight:800;letter-spacing:1px}
+.map-place-label{font-family:'DM Sans','Noto Sans Thai',sans-serif;fill:#35566b;font-size:12px;font-weight:800;paint-order:stroke;stroke:#fff9e9;stroke-width:4px;stroke-linejoin:round}
+#map .map-hint{font-size:10px;fill:#7d9b9d}
+.map-title,.map-top .small-note{box-shadow:0 5px 18px #23677b25}
+@media(max-width:680px){#map .map-art{min-height:460px}#map{aspect-ratio:.95}}
 </style></head>
 <body><div class="container">
 <header class="hero"><div><div class="eyebrow">THE SUNNY SIDE OF TRAVEL · 2026</div><h1>Hello, Penang<span style="color:#ff9659">.</span></h1><p>25—27 OCTOBER 2026 &nbsp; / &nbsp; 3 DAYS 2 NIGHTS &nbsp; / &nbsp; GEORGE TOWN</p></div>
@@ -63,7 +81,7 @@ body{background:radial-gradient(circle at 5% 10%,#e8f8ff,transparent 36%),radial
 <div class="toolbar"><div class="tabs" role="group" aria-label="Trip days"><button class="tab" data-day="1" aria-pressed="true">25 OCT · Old Town</button><button class="tab" data-day="2" aria-pressed="false">26 OCT · City & Sea</button><button class="tab" data-day="3" aria-pressed="false">27 OCT · Home</button></div><span class="tag">A little postcard from Penang</span></div>
 <div class="layout">
 <div class="left">
-<section class="panel"><div class="map-wrap"><div class="map-top"><div class="map-title"><span id="maptitle">GEORGE TOWN · DAY 01</span></div><div class="small-note">REAL PLACES · LITTLE ROUTES</div></div><div id="map" role="region" aria-label="แผนที่สถานที่เที่ยวจริงในปีนัง"></div></div><div class="map-switch"><button class="viewbtn active" data-view="island">Penang places</button><button class="viewbtn" data-view="journey">Full journey · Hat Yai → Penang</button><span class="map-switch-hint">Tap any stop to see its story</span></div><div class="map-bottom"><span class="map-caption"><span class="round" data-icon="map"></span> แผนที่จริง พร้อมเส้นเชื่อมลำดับแวะ · เส้นทางเป็นภาพรวม ไม่ใช่เส้นนำทาง</span><span>Map data © OpenStreetMap contributors</span></div></section>
+<section class="panel"><div class="map-wrap"><div class="map-top"><div class="map-title"><span id="maptitle">GEORGE TOWN · DAY 01</span></div><div class="small-note">HANDCRAFTED PENANG · NO MAP API</div></div><div id="map" role="region" aria-label="แผนที่สถานที่เที่ยวจริงในปีนัง"></div></div><div class="map-switch"><button class="viewbtn active" data-view="island">Penang places</button><button class="viewbtn" data-view="journey">Full journey · Hat Yai → Penang</button><span class="map-switch-hint">Select a pin · see its story</span></div><div class="map-bottom"><span class="map-caption"><span class="round" data-icon="map"></span> แผนที่วาดใหม่จากตำแหน่งสถานที่ · เส้นเชื่อมแสดงลำดับ ไม่ใช่เส้นทางนำทาง</span><span>Illustrated locally · no external map tiles</span></div></section>
 <section class="panel journey"><div style="display:flex;align-items:center;justify-content:space-between;gap:10px"><h3 id="journeytitle">HAT YAI → PENANG · THE JOURNEY</h3><button class="btn" data-modal="train"><span data-icon="train"></span> Train details</button></div><div class="journey-line" id="journey"></div><p>แยกเส้นทางรถไฟไว้ตรงนี้ เพราะหาดใหญ่และ Padang Besar ไม่ได้อยู่บนเกาะปีนัง</p></section>
 <div class="quick-grid"><button class="quick" data-modal="hotel"><span><b>Loop on Leith</b><small>Standard Twin Magenta · 2 nights<br>Hotel & booking details</small></span><span class="quick-icon" data-icon="hotel"></span></button><button class="quick" data-modal="train"><span><b>Transport guide</b><small>SRT · KTM · Ferry<br>Schedules & time zones</small></span><span class="quick-icon" data-icon="train"></span></button></div>
 <p class="foot">Train / ferry times are subject to change. Malaysia is 1 hour ahead of Thailand. Map markers are approximate reference locations; use the linked navigation for precise directions.</p>
@@ -71,11 +89,11 @@ body{background:radial-gradient(circle at 5% 10%,#e8f8ff,transparent 36%),radial
 <aside class="right">
 <section class="panel summary"><div class="micro" id="daychip">DAY 01 / SUNDAY</div><h2 id="daytitle"></h2><p id="daysub"></p><div class="progress"><span id="progressbar"></span></div><div class="progress-label" id="progresslabel"></div></section>
 <section class="panel route"><div class="route-head"><h2>Today's itinerary</h2><small id="date">25 OCT</small></div><div class="route-banner" id="banner"></div><div id="entries"></div></section>
-<section class="panel detail"><div class="detail-head"><div class="detail-icon" id="spoticon"></div><div><div class="micro">SELECTED STOP</div><h3 id="spotname"></h3></div></div><p id="spottime"></p><p id="spotdesc"></p><div class="buttons"><a class="btn primary" id="mapslink" href="#" target="_blank" rel="noopener"><span data-icon="map"></span> Open Google Maps</a><button class="btn" id="done"><span data-icon="check"></span> Mark visited</button><button class="btn" id="more" hidden>View details</button></div></section>
+<section class="panel detail" style="display:none"><div class="detail-head"><div class="detail-icon" id="spoticon"></div><div><div class="micro">SELECTED STOP</div><h3 id="spotname"></h3></div></div><p id="spottime"></p><p id="spotdesc"></p><div class="buttons"><a class="btn primary" id="mapslink" href="#" target="_blank" rel="noopener"><span data-icon="map"></span> Open Google Maps</a><button class="btn" id="done"><span data-icon="check"></span> Mark visited</button><button class="btn" id="more" hidden>View details</button></div></section>
 <details class="panel details"><summary>Travel notes & practical information <span data-icon="chevron"></span></summary><div class="inside">KTM Komuter ซื้อตั๋วที่ตู้สถานี · รถไฟไทยใช้เวลาไทย (TH) · มาเลเซียเร็วกว่าไทย 1 ชั่วโมง (MY)<br>วันที่ 25 ต.ค. เผื่อเวลาตรวจคนเข้าเมืองที่ Padang Besar และวันที่ 27 ต.ค. เผื่อเวลาข้ามเรือไป Butterworth<br><button class="btn" data-modal="train">See full transport guide</button></div></details>
 </aside></div></div>
 <dialog id="modal"><div class="modal-header"><h2 id="modaltitle"></h2><button class="x" id="close" aria-label="Close modal"><span data-icon="x"></span></button></div><div class="modal-body" id="modalbody"></div></dialog>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 <script>
 const icons={map:'<path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15m6-12v15"/>',train:'<rect x="5" y="3" width="14" height="15" rx="3"/><path d="M8 21l2-3m6 3-2-3M5 10h14M8 6h2m4 0h2M8 14h1m6 0h1"/>',ship:'<path d="M3 17l3 4 6-2 6 2 3-4-9-3-9 3ZM7 14V5h10v9M12 5V2"/>',hotel:'<path d="M4 21V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16M2 21h20M9 21v-5h6v5M8 7h2m4 0h2M8 11h2m4 0h2"/>',temple:'<path d="M3 9h18L12 3 3 9ZM5 9v11m14-11v11M2 20h20M9 12v8m6-8v8"/>',food:'<path d="M4 3v8a3 3 0 0 0 6 0V3M7 3v18M18 21V3c-5 2-5 9 0 10"/>',walk:'<circle cx="12" cy="4" r="2"/><path d="m8 21 2-6-3-3 3-5 4 2 3 4M10 15l5 6"/>',art:'<path d="M12 3a9 9 0 1 0 0 18h2a2 2 0 0 0 1-4 2 2 0 0 1 1-4h2a3 3 0 0 0 3-3c0-4-4-7-9-7Z"/><circle cx="7" cy="11" r="1"/><circle cx="11" cy="7" r="1"/>',landmark:'<path d="M3 10h18L12 4 3 10Zm2 0v10m5-10v10m4-10v10m5-10v10M2 20h20"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2"/>',ticket:'<path d="M3 7h18v4a2 2 0 0 0 0 4v4H3v-4a2 2 0 0 0 0-4V7Zm9 0v12"/>',pin:'<path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>',coffee:'<path d="M4 8h14v6a6 6 0 0 1-12 0V8ZM18 9h2a2 2 0 0 1 0 4h-2M3 21h17"/>',bus:'<rect x="4" y="4" width="16" height="14" rx="3"/><path d="M4 10h16M7 18v3m10-3v3M7 14h2m6 0h2"/>',home:'<path d="m3 11 9-8 9 8v10h-6v-7H9v7H3V11Z"/>',check:'<path d="m5 12 5 5L20 7"/>',x:'<path d="M18 6 6 18M6 6l12 12"/>',chevron:'<path d="m6 9 6 6 6-6"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/>'};
 function svg(name){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+(icons[name]||icons.pin)+'</svg>'}
@@ -102,6 +120,9 @@ spots.sultan={name:"Sultan Abdul Halim Ferry Terminal",loc:[5.394722,100.363649]
 spots.raja.loc=[5.413212,100.344018];
 spots.ferrymuseum.loc=[5.41459,100.3435];
 spots.dimsum.loc=[5.4275,100.3208];
+spots.hatyai={name:"Hat Yai Junction",loc:[7.0032,100.4676],icon:"train",query:"Hat Yai Junction Railway Station Thailand"};
+spots.padang={name:"Padang Besar Railway Station",loc:[6.6612,100.3223],icon:"train",query:"Padang Besar Railway Station Malaysia"};
+spots.sultan={name:"Sultan Abdul Halim Ferry Terminal",loc:[5.39472,100.36365],icon:"ship",query:"Sultan Abdul Halim Ferry Terminal Butterworth"};
 const days={
 1:{chip:"DAY 01 / SUNDAY",title:"Old Town Stories",sub:"จากหาดใหญ่สู่ Chinatown และย่านตึกเก่า",banner:"เดินเล่นเมืองเก่า ชมบ้านริมน้ำ วัดจีน และสตรีทฟู้ด",maptitle:"GEORGE TOWN · HERITAGE",points:["raja","hotel","chew","hean","armenian","chulia","kimberley"],items:[
 ["06:45 TH","Hat Yai Junction","ถึงสถานีรถไฟหาดใหญ่ เตรียมขึ้นรถ","train","hatyai"],
@@ -143,65 +164,83 @@ function selectedKey(){return day+'-'+selected}
 function setDay(n){day=n;selected=n===1?5:n===2?0:0;document.querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.day)===day)));render()}
 function save(){try{localStorage.setItem('penang-visited-v4',JSON.stringify(marks))}catch(e){}}
 function toggle(i){const k=day+'-'+i;marks[k]=!marks[k];save();render()}
-function select(i){selected=i;renderList();renderDetail();refreshMarkers(false);const p=spots[days[day].items[i][4]];if(p&&map){map.flyTo(p.loc,Math.max(map.getZoom(),14),{duration:.55});const mk=markerById[days[day].items[i][4]];if(mk)setTimeout(()=>mk.openPopup(),450)}}
-function createMap(){if(typeof L==='undefined'){$('map').innerHTML='<div style="padding:90px 30px;text-align:center;color:#347e9d;font-weight:700">เชื่อมต่ออินเทอร์เน็ตเพื่อโหลดแผนที่จริง<br><small>รายการสถานที่และ Google Maps ด้านข้างยังใช้งานได้</small></div>';return}
-map=L.map('map',{zoomControl:false,scrollWheelZoom:false}).setView([5.4205,100.3315],14);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors &copy; CARTO'}).addTo(map);
-L.control.zoom({position:'bottomright'}).addTo(map);layer=L.layerGroup().addTo(map)}
 
+function select(i,open=true){selected=i;renderList();renderDetail();refreshMarkers();if(open)openStop(i)}
 let mapView='island';
-const journeyIds=day=>day===3?['hotel','raja','sultan','butterworth','padang','hatyai']:['hatyai','padang','butterworth','sultan','raja','hotel','chew','hean','armenian','chulia','kimberley'];
-function orderedIds(){
- if(mapView==='journey'&&day!==2)return journeyIds(day);
- return days[day].points;
-}
-function relatedItem(id){return days[day].items.findIndex(it=>it[4]===id)}
-function escapeHTML(t){return String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function popupHTML(id,idx){
- const p=spots[id],its=days[day].items;
- const it=idx>=0?its[idx]:null;
- const title=it?it[1]:p.name,when=it?it[0]:'Transport connection';
- const description=it?it[2]:'จุดเชื่อมต่อการเดินทางตามแผนทริป';
- return '<div class="map-popup"><div class="pop-top"><div class="pop-ic">'+svg(p.icon)+'</div><h3>'+escapeHTML(title)+'</h3></div><div class="pop-time">'+escapeHTML(when)+'</div><p>'+escapeHTML(description)+'</p><div class="pop-actions"><a href="'+mapurl(id)+'" target="_blank" rel="noopener">Google Maps ↗</a><button onclick="window.focusStop('+idx+')" '+(idx<0?'disabled':'')+'>Show in itinerary</button>'+(id==='hotel'?"<button onclick=\"openModal('hotel')\">Hotel details</button>":'')+'</div></div>';
-}
-window.focusStop=i=>{if(i>=0)select(i)};
-function refreshMarkers(fit=true){
- if(!map)return;
- layer.clearLayers();markerById={};
- const ids=orderedIds();const seen=new Set();const unique=ids.filter(id=>{if(!spots[id]||seen.has(id))return false;seen.add(id);return true});
- const color=day===1?'#ff9b63':day===2?'#20a6d1':'#6bb99f';
- // Connecting lines indicate visit order, not road-accurate routing.
- for(let i=1;i<unique.length;i++){
-  const a=spots[unique[i-1]],b=spots[unique[i]];
-  if(!a||!b)continue;
-  const longLeg=(Math.abs(a.loc[0]-b.loc[0])>.12);
-  L.polyline([a.loc,b.loc],{color:'#fff',weight:9,opacity:.92,lineCap:'round',interactive:false}).addTo(layer);
-  L.polyline([a.loc,b.loc],{color,weight:4,opacity:.94,dashArray:longLeg?'3 12':'8 8',lineCap:'round',interactive:false}).addTo(layer);
- }
- unique.forEach((id,j)=>{
-  const p=spots[id],ix=relatedItem(id),active=days[day].items[selected]?.[4]===id;
-  const done=days[day].items.some((it,i)=>it[4]===id&&marks[day+'-'+i]);
-  const cls=(active?' active':'')+(done?' visited':'');
-  const num='<span class="marker-number">'+(j+1)+'</span>';
-  const ic=L.divIcon({className:'marker-shell',html:'<div class="marker'+cls+'">'+svg(p.icon)+num+'</div>',iconSize:[48,52],iconAnchor:[24,50]});
-  const m=L.marker(p.loc,{icon:ic,riseOnHover:true}).addTo(layer);
-  m.bindPopup(popupHTML(id,ix),{maxWidth:300,autoPan:true});
-  m.bindTooltip(p.name,{direction:'top',offset:[0,-45],className:'place-tip'});
-  m.on('click',()=>{if(ix>=0){selected=ix;renderList();renderDetail()}});
-  markerById[id]=m;
- });
- if(fit){
-  const bounds=L.latLngBounds(unique.map(id=>spots[id].loc));
-  if(bounds.isValid())map.fitBounds(bounds.pad(.17),{maxZoom:15,animate:false});
- }
- setTimeout(()=>map.invalidateSize(),80);
-}
-function setView(view){
- mapView=view;
- document.querySelectorAll('.viewbtn').forEach(b=>b.classList.toggle('active',b.dataset.view===view));
- refreshMarkers(true);
-}
+function orderedIds(){return mapView==='journey'&&day!==2?(day===3?['hotel','raja','sultan','butterworth','padang','hatyai']:['hatyai','padang','butterworth','sultan','raja','hotel','chew','hean','armenian','chulia','kimberley']):days[day].points}
+function createMap(){refreshMarkers()}
+function setView(view){mapView=view;document.querySelectorAll('.viewbtn').forEach(b=>b.classList.toggle('active',b.dataset.view===view));refreshMarkers()}
 document.querySelectorAll('.viewbtn').forEach(b=>b.onclick=()=>setView(b.dataset.view));
+const geo={hatyai:[7.0032,100.4676],padang:[6.6612,100.3223],butterworth:[5.3946,100.3667],sultan:[5.39472,100.36365],raja:[5.4132,100.344],hotel:[5.4217,100.3331],chew:[5.4135,100.3405],hean:[5.411,100.3387],armenian:[5.4155,100.3376],chulia:[5.4173,100.3371],kimberley:[5.4167,100.3325],dimsum:[5.4284,100.3187],mosque:[5.4638,100.3059],hin:[5.4105,100.3285],ferrymuseum:[5.4157,100.3434],townhall:[5.4224,100.3434],gurney:[5.4421,100.3082]};
+function mapPoint(id){
+ const loc=geo[id]||spots[id]?.loc;
+ if(!loc)return [0,0];
+ // Geographic projection of Penang locations, adjusted uniformly for legibility
+ if(id==='mosque')return [145,120];if(id==='gurney')return [205,255];if(id==='butterworth')return [830,615];if(id==='sultan')return [790,565];
+return [Math.round(450+(loc[1]-100.331)*11300),Math.round(430-(loc[0]-5.424)*10500)]
+}
+function svgBase(){
+ const water=`<rect width="980" height="780" fill="#b7eaf3"/><g class="map-water-wave" stroke="#fff" opacity=".54" fill="none" stroke-width="2.4">`+
+ Array.from({length:16},(_,i)=>`<path d="M${600+(i%3)*24} ${25+i*50}q16 -10 32 0t32 0t32 0t32 0t32 0t32 0t32 0"/>`).join('')+'</g>';
+ const land=`<path d="M-70-40H730Q580 34 485 110Q360 162 343 248Q310 355 345 453Q370 580 545 640L680 840H-70Z" fill="#ffecc6" stroke="#e8c28d" stroke-width="7"/>
+ <path d="M-70-40H730Q580 34 485 110Q360 162 343 248Q310 355 345 453Q370 580 545 640L680 840H-70Z" fill="url(#papergrid)" opacity=".36"/>`;
+ const roads=`<g fill="none" stroke-linecap="round"><path d="M-40 168Q175 144 310 256T560 535" stroke="#fffdf7" stroke-width="27"/><path d="M-30 168Q175 144 310 256T560 535" stroke="#e9c5a1" stroke-width="2.5" stroke-dasharray="9 14"/>
+ <path d="M20 410Q150 365 295 418T540 590" stroke="#fffdf7" stroke-width="21"/><path d="M20 410Q150 365 295 418T540 590" stroke="#e9c5a1" stroke-width="2" stroke-dasharray="7 11"/>
+ <path d="M100 35Q110 260 230 345T270 750" stroke="#fffdf7" stroke-width="18"/><path d="M100 35Q110 260 230 345T270 750" stroke="#e9c5a1" stroke-width="2" stroke-dasharray="6 10"/>
+ <path d="M25 580Q180 560 330 675" stroke="#fffdf7" stroke-width="18"/>
+ </g>`;
+ const buildings=Array.from({length:40},(_,i)=>{let x=20+(i*73)%305,y=70+(i*117)%610;const w=19+(i%3)*9,h=20+(i%4)*5;return `<g opacity=".9"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="3" fill="${['#f9c0ac','#f6d77c','#bce4cf','#eec9d2'][i%4]}" stroke="#dfbca3" stroke-width="1.5"/><path d="M${x-3} ${y}l${w/2+3} -9l${w/2+3} 9" fill="#fff6df" stroke="#d4ad91" stroke-width="1.5"/></g>`}).join('');
+ const features=`<g opacity=".92">
+ <ellipse cx="175" cy="100" rx="61" ry="38" fill="#b8e4b0"/><circle cx="144" cy="89" r="24" fill="#76c7a4"/><circle cx="194" cy="100" r="31" fill="#75c5a1"/>
+ <g transform="translate(140 480)"><rect width="80" height="62" rx="4" fill="#ffb28e" stroke="#cf8b75" stroke-width="3"/><path d="M-9 0l48-35 51 35" fill="#f5d471" stroke="#cf8b75" stroke-width="3"/><rect x="32" y="24" width="18" height="38" fill="#fff6e5"/><rect x="10" y="14" width="15" height="16" fill="#bcecf5"/><rect x="56" y="14" width="15" height="16" fill="#bcecf5"/></g>
+ <g transform="translate(235 575)"><rect width="76" height="62" rx="3" fill="#fff5df" stroke="#c9a17f" stroke-width="3"/><path d="M-8 0Q8 -9 20 -23Q40 -10 55 -23Q69 -6 84 0" fill="none" stroke="#d86d56" stroke-width="10"/><rect x="30" y="21" width="18" height="41" fill="#d86d56"/></g>
+ <g transform="translate(715 390)"><path d="M-60 26H75L48 60H-32Z" fill="#fff9ed" stroke="#3983a3" stroke-width="4"/><rect x="-40" y="-25" width="90" height="51" rx="5" fill="#ffe083" stroke="#3983a3" stroke-width="4"/><rect x="-28" y="-12" width="22" height="20" fill="#b9eaf4"/><rect x="5" y="-12" width="22" height="20" fill="#b9eaf4"/><path d="M-72 74q23-15 46 0t46 0t46 0t46 0" stroke="#fff" stroke-width="6" fill="none"/></g>
+ </g>`;
+ return `<defs><pattern id="papergrid" width="46" height="37" patternUnits="userSpaceOnUse"><path d="M0 0H46M0 19H46M23 0V19M0 19V37" fill="none" stroke="#deb88d" stroke-width="1.4"/></pattern></defs>`+water+land+roads+buildings+features+
+ `<text x="45" y="44" class="map-label-svg" font-size="22">PENANG ISLAND</text><text x="645" y="190" class="map-label-svg" transform="rotate(-12 645 190)">PENANG STRAIT</text><circle cx="840" cy="100" r="45" fill="#ffe17e" opacity=".9"/><path d="M730 660q70 -35 150 0" stroke="#fff" stroke-width="5" fill="none"/>`;
+}
+function pointLabel(id,x,y){
+ const labels={hotel:'LOOP ON LEITH',chew:'CHEW JETTY',hean:'HEAN BOO THEAN',armenian:'ARMENIAN ST.',chulia:'CHULIA ST.',kimberley:'KIMBERLEY ST.',dimsum:'DIM SUM',mosque:'FLOATING MOSQUE',hin:'HIN BUS DEPOT',ferrymuseum:'FERRY MUSEUM',townhall:'TOWN HALL',gurney:'GURNEY BAY',raja:'FERRY TERMINAL',butterworth:'BUTTERWORTH'};
+ return `<text class="map-place-label" x="${x+25}" y="${y-19}">${labels[id]||''}</text>`;
+}
+function markerSvg(id,i,x,y){
+ const p=spots[id];const related=days[day].items.findIndex(it=>it[4]===id);const visited=days[day].items.some((it,j)=>it[4]===id&&marks[day+'-'+j]);
+ return `<g class="map-pin ${related===selected?'selected':''} ${visited?'visited':''}" role="button" tabindex="0" aria-label="${p.name.replace(/"/g,'')}" onclick="window.pinSelect('${id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.pinSelect('${id}')}">
+ <circle class="pin-circle" cx="${x}" cy="${y}" r="24"/><g transform="translate(${x-13} ${y-13}) scale(1.08)" stroke="#24799c" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">${(icons[p.icon]||icons.pin)}</g>
+ <circle class="pin-count" cx="${x+20}" cy="${y-19}" r="12"/><text x="${x+20}" y="${y-15}" text-anchor="middle" font-size="11" font-weight="900" fill="white">${i+1}</text></g>`;
+}
+function routeSvg(ids){
+ let pts=ids.filter(id=>spots[id]).map(id=>mapPoint(id));
+ if(pts.length<2)return '';
+ const d=pts.map(([x,y],i)=>(i?'L':'M')+x+' '+y).join(' ');
+ return `<path d="${d}" stroke="#fffdf9" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path class="route-path" d="${d}" stroke="${day===2?'#279dbd':day===3?'#69b49d':'#f18e5c'}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`;
+}
+function journeySvg(){
+ const names=day===3?['George Town','Butterworth','Padang Besar','Hat Yai']:['Hat Yai','Padang Besar','Butterworth','George Town'];
+ const coords=[[155,290],[375,470],[600,355],[815,515]];
+ const path=coords.map(([x,y],i)=>(i?'L':'M')+x+' '+y).join(' ');
+ const keys=day===3?['raja','butterworth','padang','hatyai']:['hatyai','padang','butterworth','raja'];
+ return `<rect width="980" height="780" fill="#c2eaf4"/><path d="M0 0H980V205Q670 180 540 305T0 430Z" fill="#ffe8bb"/><path d="M0 540Q280 510 455 600T980 580V780H0Z" fill="#e9d4a5"/>
+ <path d="${path}" stroke="white" stroke-width="19" stroke-linejoin="round" stroke-linecap="round" fill="none"/><path class="route-path" d="${path}" stroke="#f49459" stroke-width="7" fill="none" stroke-linecap="round"/>
+ ${coords.map(([x,y],i)=>`<g role="button" tabindex="0" class="map-pin" onclick="window.pinSelect('${keys[i]}')" onkeydown="if(event.key==='Enter')window.pinSelect('${keys[i]}')"><circle class="pin-circle" cx="${x}" cy="${y}" r="34"/><g transform="translate(${x-14} ${y-14}) scale(1.2)" stroke="#257b9e" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">${icons[i===3?'ship':'train']}</g><text x="${x}" y="${y+60}" text-anchor="middle" class="map-place-label" font-size="17">${names[i]}</text></g>`).join('')}
+ <text x="65" y="70" class="map-label-svg">THE WHOLE JOURNEY</text><text x="65" y="98" class="map-label-svg" font-size="11">Route schematic · not to scale</text>`;
+}
+window.pinSelect=id=>{const ix=days[day].items.findIndex(it=>it[4]===id);if(ix>=0){selected=ix;renderList();renderDetail();refreshMarkers()}openStop(ix,id)};
+function refreshMarkers(){
+ const ids=[...new Set(orderedIds())].filter(id=>spots[id]);
+ const art=mapView==='journey'&&day!==2?journeySvg():svgBase()+routeSvg(ids)+ids.map((id,i)=>{const [x,y]=mapPoint(id);return markerSvg(id,i,x,y)+pointLabel(id,x,y)}).join('');
+ $('map').innerHTML=`<svg class="map-art" viewBox="0 0 980 780" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hand-drawn Penang illustrated map showing visit order and locations">${art}</svg>`;
+}
+function openStop(i,id){
+ const it=i>=0?days[day].items[i]:null;
+ const p=id?spots[id]:it&&spots[it[4]];
+ const title=it?it[1]:(p?p.name:'Travel stop');
+ const when=it?it[0]:'Route connection';
+ const desc=it?it[2]:'จุดต่อการเดินทางในแผนเที่ยว';
+ $('modaltitle').textContent=title;
+ $('modalbody').innerHTML=`<div style="display:flex;gap:12px;align-items:center;margin-bottom:16px"><div class="detail-icon">${svg(it?it[3]:p.icon)}</div><div><b>${when}</b><p style="margin:2px 0">${desc}</p></div></div><div class="notice">สถานที่นี้อยู่ในแผนเที่ยววันที่ ${25+day-1} ตุลาคม 2026 · แผนที่ภาพวาดจัดวางจากตำแหน่งอ้างอิงโดยประมาณ ไม่ใช่มาตราส่วนจริง</div><div class="buttons" style="margin-top:17px"><a class="btn primary" href="${mapurl(id||it[4]||title)}" target="_blank" rel="noopener">Open Google Maps</a>${i>=0?`<button class="btn" onclick="toggle(${i});document.getElementById('modal').close()">Mark visited</button>`:''}${(id==='hotel'||it?.[4]==='hotel')?`<button class="btn" onclick="openModal('hotel')">Hotel booking</button>`:''}</div>`;
+ $('modal').showModal();
+}
 function renderList(){const box=$('entries');box.innerHTML='';days[day].items.forEach((it,i)=>{const row=document.createElement('div');row.className='entry';const tm=document.createElement('div');tm.className='entry-time';tm.textContent=it[0];const tr=document.createElement('div');tr.className='track';tr.innerHTML='<span class="track-dot"></span>'+(i<days[day].items.length-1?'<span class="track-line"></span>':'');const b=document.createElement('button');b.className='stop'+(i===selected?' active':'');b.innerHTML='<span class="check '+(marks[day+'-'+i]?'yes':'')+'">'+(marks[day+'-'+i]?svg('check'):'')+'</span><span class="stop-body"><span class="stop-name"></span><span class="stop-desc"></span></span>';b.querySelector('.stop-name').textContent=it[1];b.querySelector('.stop-desc').textContent=it[2];b.onclick=()=>select(i);b.querySelector('.check').onclick=e=>{e.stopPropagation();toggle(i)};row.append(tm,tr,b);box.appendChild(row)})}
 function renderDetail(){const it=days[day].items[selected];$('spoticon').innerHTML=svg(it[3]);$('spotname').textContent=it[1];$('spottime').textContent=it[0];$('spotdesc').textContent=it[2];$('mapslink').href=mapurl(it[4]||it[1]);$('done').innerHTML=svg('check')+(marks[selectedKey()]?' Visited · undo':' Mark visited');$('done').onclick=()=>toggle(selected);$('more').hidden=it[4]!=='hotel';$('more').onclick=()=>openModal('hotel')}
 function renderJourney(){const names=day===3?['George Town','Butterworth','Padang Besar','Hat Yai']:['Hat Yai','Padang Besar','Butterworth','George Town'];const ico=day===3?['ship','train','ticket','train']:['train','ticket','train','ship'];$('journeytitle').textContent=day===3?'PENANG → HAT YAI · THE JOURNEY':'HAT YAI → PENANG · THE JOURNEY';$('journey').innerHTML=names.map((n,i)=>'<div class="j-stop"><i>'+svg(ico[i])+'</i><b>'+n+'</b></div>'+(i<names.length-1?'<div class="j-connector"></div>':'')).join('')}
