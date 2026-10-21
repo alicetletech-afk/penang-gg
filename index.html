@@ -32,6 +32,30 @@ dialog{border:0;border-radius:25px;box-shadow:0 28px 90px #123e5b69;width:min(92
 @media(max-width:950px){.layout{grid-template-columns:1fr}.right{display:grid;grid-template-columns:1fr 1fr}.route{grid-row:span 3;max-height:800px}.detail,.details{grid-column:1}.summary{grid-column:1}.map-top .small-note{display:none}#map{height:530px}}
 @media(max-width:680px){.container{padding:12px 12px 35px}.hero{padding:20px;border-radius:22px;min-height:130px}.hero h1{font-size:34px;letter-spacing:-1px}.hero-art{width:88px}.hero p{font-size:10px}.tabs{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.tab{padding:10px 6px;font-size:10px}.toolbar{margin:16px 0}.toolbar>.tag{display:none}#map{height:470px}.right{display:flex}.route{max-height:none}.map-top{left:12px;top:12px}.map-title{font-size:10px}.quick-grid{grid-template-columns:1fr 1fr}.quick{padding:13px}.quick b{font-size:11px}.quick small{font-size:10px}.quick-icon{width:32px;height:32px}.entry{grid-template-columns:76px 15px 1fr;gap:7px}.route{padding:20px 15px}.facts{grid-template-columns:1fr}.summary{padding:19px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* Penang postcard map v3 */
+:root{--bg:#fffaf0;--ink:#27435a;--muted:#718da0}
+body{background:radial-gradient(circle at 5% 10%,#e8f8ff,transparent 36%),radial-gradient(circle at 100% 15%,#fff2d0,transparent 32%),#fffaf0}
+.container{max-width:1600px}.hero{border:2px solid #f2e4c8;background:linear-gradient(115deg,#fffdf7,#fff4d9 80%,#e0f7ff);box-shadow:0 10px 0 #e9e7da55}
+.layout{grid-template-columns:minmax(0,1.32fr) minmax(440px,.68fr);gap:24px}
+.panel{border:1px solid #f2e8d7;box-shadow:0 12px 32px #53788c13}
+.right{gap:20px}.route{max-height:780px;padding:25px 28px}.entry{min-height:76px;grid-template-columns:98px 18px 1fr;gap:12px}
+.stop-name{font-size:13px}.stop-desc{font-size:11.5px}.summary{background:linear-gradient(130deg,#fff8e7,#fffefb)}
+.map-wrap{border-radius:25px 25px 0 0;overflow:hidden}
+#map{height:clamp(570px,57vw,760px);background:#c9edf5}
+.map-switch{display:flex;gap:9px;padding:12px 17px 4px;align-items:center;flex-wrap:wrap;background:#fff}
+.viewbtn{border:1px solid #e5e0cf;background:#f8fbfb;border-radius:22px;padding:8px 13px;color:#31566b;font-size:11px;font-weight:800}
+.viewbtn.active{background:#ffe08a;border-color:#f3c25b}.map-switch-hint{margin-left:auto;font-size:10px;color:#8a9da5}
+.marker-shell{background:transparent;border:0}.marker{width:46px;height:46px;border-radius:18px 18px 18px 6px;background:#fffef7;border:3px solid #fff;box-shadow:0 5px 0 #2d789c30,0 8px 24px #194b672b;position:relative}
+.marker:before{content:"";position:absolute;inset:4px;border-radius:12px;background:#eaf8fb;z-index:-1}
+.marker.active{background:#ffdd79}.marker.visited{background:#d3f0df}
+.marker-number{position:absolute;right:-10px;top:-9px;background:#ff9a63;border:2px solid #fff;color:#fff;border-radius:50%;width:22px;height:22px;display:grid;place-items:center;font-size:10px;font-weight:900}
+.map-popup{font-family:'DM Sans','Noto Sans Thai',sans-serif;min-width:220px;max-width:280px}.map-popup .pop-top{display:flex;gap:10px;align-items:center}.map-popup .pop-ic{width:38px;height:38px;flex:none;border-radius:12px;background:#fff0c2;display:grid;place-items:center;color:#21799a}.map-popup .pop-ic svg{width:20px;height:20px}.map-popup h3{font-size:14px;margin:0;line-height:1.5}.map-popup .pop-time{color:#f08e56;font-size:11px;font-weight:800;margin:9px 0 4px}.map-popup p{font-size:11px;color:#6b8998;line-height:1.7;margin:5px 0}.map-popup .pop-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.map-popup button,.map-popup a{border:1px solid #e6c978;border-radius:9px;background:#ffdf8d;color:#25475a;text-decoration:none;font-size:10px;font-weight:800;padding:8px 10px;cursor:pointer}.map-popup a{background:#fff}
+.leaflet-popup-content-wrapper{border-radius:18px!important;box-shadow:0 12px 38px #2c60774a!important}.leaflet-popup-content{margin:15px 17px!important}.leaflet-popup-tip{background:#fff!important}
+.route-note{display:flex;align-items:center;gap:7px;font-size:11px;color:#7897a4;padding:8px 15px 13px}
+@media(min-width:1200px){.layout{grid-template-columns:minmax(0,1.3fr) minmax(450px,.7fr)}}
+@media(max-width:1000px){.layout{grid-template-columns:1fr}.right{display:flex}.route{max-height:none}#map{height:560px}}
+@media(max-width:680px){#map{height:490px}.route{padding:19px 16px}.entry{grid-template-columns:78px 15px 1fr;gap:7px}.map-switch-hint{width:100%;margin-left:0}.hero h1{font-size:34px}}
 </style></head>
 <body><div class="container">
 <header class="hero"><div><div class="eyebrow">THE SUNNY SIDE OF TRAVEL · 2026</div><h1>Hello, Penang<span style="color:#ff9659">.</span></h1><p>25—27 OCTOBER 2026 &nbsp; / &nbsp; 3 DAYS 2 NIGHTS &nbsp; / &nbsp; GEORGE TOWN</p></div>
@@ -39,7 +63,7 @@ dialog{border:0;border-radius:25px;box-shadow:0 28px 90px #123e5b69;width:min(92
 <div class="toolbar"><div class="tabs" role="group" aria-label="Trip days"><button class="tab" data-day="1" aria-pressed="true">25 OCT · Old Town</button><button class="tab" data-day="2" aria-pressed="false">26 OCT · City & Sea</button><button class="tab" data-day="3" aria-pressed="false">27 OCT · Home</button></div><span class="tag">A little postcard from Penang</span></div>
 <div class="layout">
 <div class="left">
-<section class="panel"><div class="map-wrap"><div class="map-top"><div class="map-title"><span id="maptitle">GEORGE TOWN · DAY 01</span></div><div class="small-note">REAL MAP · CUSTOM CUTE PINS</div></div><div id="map" role="region" aria-label="แผนที่สถานที่เที่ยวจริงในปีนัง"></div></div><div class="map-bottom"><span class="map-caption"><span class="round" data-icon="map"></span> แผนที่จริง · เลือกหมุดเพื่อดูสถานที่</span><span>Map data © OpenStreetMap contributors</span></div></section>
+<section class="panel"><div class="map-wrap"><div class="map-top"><div class="map-title"><span id="maptitle">GEORGE TOWN · DAY 01</span></div><div class="small-note">REAL PLACES · LITTLE ROUTES</div></div><div id="map" role="region" aria-label="แผนที่สถานที่เที่ยวจริงในปีนัง"></div></div><div class="map-switch"><button class="viewbtn active" data-view="island">Penang places</button><button class="viewbtn" data-view="journey">Full journey · Hat Yai → Penang</button><span class="map-switch-hint">Tap any stop to see its story</span></div><div class="map-bottom"><span class="map-caption"><span class="round" data-icon="map"></span> แผนที่จริง พร้อมเส้นเชื่อมลำดับแวะ · เส้นทางเป็นภาพรวม ไม่ใช่เส้นนำทาง</span><span>Map data © OpenStreetMap contributors</span></div></section>
 <section class="panel journey"><div style="display:flex;align-items:center;justify-content:space-between;gap:10px"><h3 id="journeytitle">HAT YAI → PENANG · THE JOURNEY</h3><button class="btn" data-modal="train"><span data-icon="train"></span> Train details</button></div><div class="journey-line" id="journey"></div><p>แยกเส้นทางรถไฟไว้ตรงนี้ เพราะหาดใหญ่และ Padang Besar ไม่ได้อยู่บนเกาะปีนัง</p></section>
 <div class="quick-grid"><button class="quick" data-modal="hotel"><span><b>Loop on Leith</b><small>Standard Twin Magenta · 2 nights<br>Hotel & booking details</small></span><span class="quick-icon" data-icon="hotel"></span></button><button class="quick" data-modal="train"><span><b>Transport guide</b><small>SRT · KTM · Ferry<br>Schedules & time zones</small></span><span class="quick-icon" data-icon="train"></span></button></div>
 <p class="foot">Train / ferry times are subject to change. Malaysia is 1 hour ahead of Thailand. Map markers are approximate reference locations; use the linked navigation for precise directions.</p>
@@ -72,13 +96,19 @@ gurney:{name:"Gurney Bay",loc:[5.4421,100.3082],icon:"sun",query:"Gurney Bay Pen
 raja:{name:"Raja Tun Uda Ferry Terminal",loc:[5.4137,100.3438],icon:"ship",query:"Raja Tun Uda Ferry Terminal"},
 butterworth:{name:"Butterworth Station",loc:[5.3946,100.3667],icon:"train",query:"Butterworth KTM station"}
 };
+spots.hatyai={name:"Hat Yai Junction",loc:[7.0032,100.4676],icon:"train",query:"Hat Yai Junction railway station Thailand"};
+spots.padang={name:"Padang Besar Railway Station",loc:[6.6612,100.3223],icon:"train",query:"Padang Besar Railway Station Malaysia"};
+spots.sultan={name:"Sultan Abdul Halim Ferry Terminal",loc:[5.394722,100.363649],icon:"ship",query:"Sultan Abdul Halim Ferry Terminal Butterworth"};
+spots.raja.loc=[5.413212,100.344018];
+spots.ferrymuseum.loc=[5.41459,100.3435];
+spots.dimsum.loc=[5.4275,100.3208];
 const days={
-1:{chip:"DAY 01 / SUNDAY",title:"Old Town Stories",sub:"จากหาดใหญ่สู่ Chinatown และย่านตึกเก่า",banner:"เดินเล่นเมืองเก่า ชมบ้านริมน้ำ วัดจีน และสตรีทฟู้ด",maptitle:"GEORGE TOWN · HERITAGE",points:["hotel","chew","hean","armenian","chulia","kimberley"],items:[
-["06:45 TH","Hat Yai Junction","ถึงสถานีรถไฟหาดใหญ่ เตรียมขึ้นรถ","train",null],
-["07:20 TH","SRT Train 45","หาดใหญ่ → Padang Besar · ถึง 08:05 TH / 09:05 MY","train",null],
-["09:05 MY","Padang Besar","ผ่าน ตม. และซื้อตั๋ว KTM ที่ตู้","ticket",null],
-["10:35 MY","KTM Komuter","Padang Besar → Butterworth · ถึง 12:26 MY","train",null],
-["12:30–14:00 MY","Penang Ferry","Butterworth → George Town · เวลารอเรือโดยประมาณ","ship",null],
+1:{chip:"DAY 01 / SUNDAY",title:"Old Town Stories",sub:"จากหาดใหญ่สู่ Chinatown และย่านตึกเก่า",banner:"เดินเล่นเมืองเก่า ชมบ้านริมน้ำ วัดจีน และสตรีทฟู้ด",maptitle:"GEORGE TOWN · HERITAGE",points:["raja","hotel","chew","hean","armenian","chulia","kimberley"],items:[
+["06:45 TH","Hat Yai Junction","ถึงสถานีรถไฟหาดใหญ่ เตรียมขึ้นรถ","train","hatyai"],
+["07:20 TH","SRT Train 45","หาดใหญ่ → Padang Besar · ถึง 08:05 TH / 09:05 MY","train","hatyai"],
+["09:05 MY","Padang Besar","ผ่าน ตม. และซื้อตั๋ว KTM ที่ตู้","ticket","padang"],
+["10:35 MY","KTM Komuter","Padang Besar → Butterworth · ถึง 12:26 MY","train","butterworth"],
+["12:30–14:00 MY","Penang Ferry","Butterworth → George Town · เวลารอเรือโดยประมาณ","ship","raja"],
 ["14:00–15:00 MY","Loop on Leith","ฝากกระเป๋าหรือเช็กอินหลัง 15:00","hotel","hotel"],
 ["15:00–16:00 MY","Chew Jetty","เดินชมชุมชนบ้านไม้ริมน้ำ","home","chew"],
 ["16:00–16:45 MY","Hean Boo Thean Temple","ชมสถาปัตยกรรมวัดจีนริมน้ำ","temple","hean"],
@@ -87,24 +117,24 @@ const days={
 ["19:00+ MY","Kimberley Street","มื้อเย็นสตรีทฟู้ด","food","kimberley"]]},
 2:{chip:"DAY 02 / MONDAY",title:"City & Sea",sub:"อาคารสวย ศิลปะ และแสงเย็นริมทะเล",banner:"เริ่ม 09:30 น. · Gurney Bay 17:30–19:00 น.",maptitle:"PENANG · CITY & SEA",points:["dimsum","mosque","hin","ferrymuseum","townhall","gurney"],items:[
 ["09:30–10:15 MY","Cheng Zheng Dim Sum / Fu Er Dai (富二代)","อาหารเช้าติ่มซำ","food","dimsum"],
-["10:15–11:00 MY","Grab to Tanjung Bungah","เดินทางไปมัสยิดริมทะเล","bus",null],
+["10:15–11:00 MY","Grab to Tanjung Bungah","เดินทางไปมัสยิดริมทะเล","bus","mosque"],
 ["11:00–11:40 MY","Tanjung Bungah Floating Mosque","ถ่ายภาพสถาปัตยกรรมริมทะเล","landmark","mosque"],
-["11:40–12:30 MY","Grab to George Town","เดินทางกลับเข้าเมือง","bus",null],
+["11:40–12:30 MY","Grab to George Town","เดินทางกลับเข้าเมือง","bus","hin"],
 ["12:30–14:30 MY","Hin Bus Depot","ชมงานศิลปะ ร้านค้า และพื้นที่สร้างสรรค์","art","hin"],
 ["14:30–15:00 MY","Penang Ferry Museum","ถ่ายภาพตัวเรือจากภายนอกพื้นที่ที่เข้าถึงได้","ship","ferrymuseum"],
 ["15:00–16:00 MY","Penang Town Hall & City Hall","ชมอาคารสถาปัตยกรรมโคโลเนียล","landmark","townhall"],
-["16:00–17:30 MY","Café / Rest / Transfer","พักและเดินทางไป Gurney Bay","coffee",null],
+["16:00–17:30 MY","Café / Rest / Transfer","พักและเดินทางไป Gurney Bay","coffee","gurney"],
 ["17:30–19:00 MY","Gurney Bay","ชมวิวแสงเย็นถึงช่วงเริ่มค่ำ","sun","gurney"],
-["19:00+ MY","Dinner","มื้อเย็นตามสะดวก","food",null]]},
-3:{chip:"DAY 03 / TUESDAY",title:"Until Next Time",sub:"เช้าเบาๆ ก่อนนั่งเฟอร์รี่และรถไฟกลับบ้าน",banner:"เช็กเอาต์ แล้วข้ามเรือไป Butterworth เพื่อขึ้น KTM",maptitle:"PENANG · HEADING HOME",points:["hotel","raja","butterworth"],items:[
+["19:00+ MY","Dinner","มื้อเย็นตามสะดวก","food","gurney"]]},
+3:{chip:"DAY 03 / TUESDAY",title:"Until Next Time",sub:"เช้าเบาๆ ก่อนนั่งเฟอร์รี่และรถไฟกลับบ้าน",banner:"เช็กเอาต์ แล้วข้ามเรือไป Butterworth เพื่อขึ้น KTM",maptitle:"PENANG · HEADING HOME",points:["hotel","raja","sultan","butterworth"],items:[
 ["08:30–09:30 MY","Breakfast & Pack","ซื้ออาหารเช้าใกล้โรงแรมและเก็บกระเป๋า","coffee","hotel"],
 ["09:30–10:00 MY","Loop on Leith","เช็กเอาต์","hotel","hotel"],
 ["10:00–10:20 MY","Raja Tun Uda Ferry Terminal","เดินหรือ Grab ไปท่าเรือ","ship","raja"],
 ["10:20–11:30 MY","Penang Ferry","ข้ามไป Butterworth · เวลารวมการรอเรือ","ship","raja"],
 ["11:30–12:15 MY","Butterworth KTM","ซื้อตั๋วที่ตู้และรอรถ","ticket","butterworth"],
-["12:35–14:26 MY","KTM Komuter","Butterworth → Padang Besar","train",null],
-["14:26–16:40 MY","Padang Besar","ผ่าน ตม. และเตรียมขึ้นรถไฟไทย","ticket",null],
-["15:40–16:25 TH","SRT Train 950","Padang Besar → Hat Yai (16:40–17:25 MY)","train",null]]}
+["12:35–14:26 MY","KTM Komuter","Butterworth → Padang Besar","train","padang"],
+["14:26–16:40 MY","Padang Besar","ผ่าน ตม. และเตรียมขึ้นรถไฟไทย","ticket","padang"],
+["15:40–16:25 TH","SRT Train 950","Padang Besar → Hat Yai (16:40–17:25 MY)","train","hatyai"]]}
 };
 const $=id=>document.getElementById(id);let day=1,selected=5,marks={},map,layer,markerById={};
 try{marks=JSON.parse(localStorage.getItem('penang-visited-v4')||'{}')}catch(e){}
@@ -113,17 +143,69 @@ function selectedKey(){return day+'-'+selected}
 function setDay(n){day=n;selected=n===1?5:n===2?0:0;document.querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.day)===day)));render()}
 function save(){try{localStorage.setItem('penang-visited-v4',JSON.stringify(marks))}catch(e){}}
 function toggle(i){const k=day+'-'+i;marks[k]=!marks[k];save();render()}
-function select(i){selected=i;renderList();renderDetail();refreshMarkers();const p=spots[days[day].items[i][4]];if(p&&map)map.flyTo(p.loc,Math.max(map.getZoom(),15),{duration:.65})}
+function select(i){selected=i;renderList();renderDetail();refreshMarkers(false);const p=spots[days[day].items[i][4]];if(p&&map){map.flyTo(p.loc,Math.max(map.getZoom(),14),{duration:.55});const mk=markerById[days[day].items[i][4]];if(mk)setTimeout(()=>mk.openPopup(),450)}}
 function createMap(){if(typeof L==='undefined'){$('map').innerHTML='<div style="padding:90px 30px;text-align:center;color:#347e9d;font-weight:700">เชื่อมต่ออินเทอร์เน็ตเพื่อโหลดแผนที่จริง<br><small>รายการสถานที่และ Google Maps ด้านข้างยังใช้งานได้</small></div>';return}
 map=L.map('map',{zoomControl:false,scrollWheelZoom:false}).setView([5.4205,100.3315],14);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors &copy; CARTO'}).addTo(map);
 L.control.zoom({position:'bottomright'}).addTo(map);layer=L.layerGroup().addTo(map)}
-function refreshMarkers(){if(!map)return;layer.clearLayers();markerById={};const ids=days[day].points;ids.forEach((id,j)=>{const p=spots[id];const related=days[day].items.findIndex((it,i)=>it[4]===id&&i===selected);const done=days[day].items.some((it,i)=>it[4]===id&&marks[day+'-'+i]);const cls=(related>=0?' active':'')+(done?' visited':'');const ic=L.divIcon({className:'marker-shell',html:'<div class="marker'+cls+'">'+svg(p.icon)+'</div>',iconSize:[48,52],iconAnchor:[24,50]});const m=L.marker(p.loc,{icon:ic}).addTo(layer).bindTooltip(p.name,{direction:'top',offset:[0,-43],className:'place-tip'});m.on('click',()=>{const ix=days[day].items.findIndex(it=>it[4]===id);if(ix>=0)select(ix)});markerById[id]=m});
-const bounds=L.latLngBounds(ids.map(id=>spots[id].loc));if(bounds.isValid())map.fitBounds(bounds.pad(.22),{maxZoom:15,animate:false});setTimeout(()=>map.invalidateSize(),100)}
+
+let mapView='island';
+const journeyIds=day=>day===3?['hotel','raja','sultan','butterworth','padang','hatyai']:['hatyai','padang','butterworth','sultan','raja','hotel','chew','hean','armenian','chulia','kimberley'];
+function orderedIds(){
+ if(mapView==='journey'&&day!==2)return journeyIds(day);
+ return days[day].points;
+}
+function relatedItem(id){return days[day].items.findIndex(it=>it[4]===id)}
+function escapeHTML(t){return String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function popupHTML(id,idx){
+ const p=spots[id],its=days[day].items;
+ const it=idx>=0?its[idx]:null;
+ const title=it?it[1]:p.name,when=it?it[0]:'Transport connection';
+ const description=it?it[2]:'จุดเชื่อมต่อการเดินทางตามแผนทริป';
+ return '<div class="map-popup"><div class="pop-top"><div class="pop-ic">'+svg(p.icon)+'</div><h3>'+escapeHTML(title)+'</h3></div><div class="pop-time">'+escapeHTML(when)+'</div><p>'+escapeHTML(description)+'</p><div class="pop-actions"><a href="'+mapurl(id)+'" target="_blank" rel="noopener">Google Maps ↗</a><button onclick="window.focusStop('+idx+')" '+(idx<0?'disabled':'')+'>Show in itinerary</button>'+(id==='hotel'?"<button onclick=\"openModal('hotel')\">Hotel details</button>":'')+'</div></div>';
+}
+window.focusStop=i=>{if(i>=0)select(i)};
+function refreshMarkers(fit=true){
+ if(!map)return;
+ layer.clearLayers();markerById={};
+ const ids=orderedIds();const seen=new Set();const unique=ids.filter(id=>{if(!spots[id]||seen.has(id))return false;seen.add(id);return true});
+ const color=day===1?'#ff9b63':day===2?'#20a6d1':'#6bb99f';
+ // Connecting lines indicate visit order, not road-accurate routing.
+ for(let i=1;i<unique.length;i++){
+  const a=spots[unique[i-1]],b=spots[unique[i]];
+  if(!a||!b)continue;
+  const longLeg=(Math.abs(a.loc[0]-b.loc[0])>.12);
+  L.polyline([a.loc,b.loc],{color:'#fff',weight:9,opacity:.92,lineCap:'round',interactive:false}).addTo(layer);
+  L.polyline([a.loc,b.loc],{color,weight:4,opacity:.94,dashArray:longLeg?'3 12':'8 8',lineCap:'round',interactive:false}).addTo(layer);
+ }
+ unique.forEach((id,j)=>{
+  const p=spots[id],ix=relatedItem(id),active=days[day].items[selected]?.[4]===id;
+  const done=days[day].items.some((it,i)=>it[4]===id&&marks[day+'-'+i]);
+  const cls=(active?' active':'')+(done?' visited':'');
+  const num='<span class="marker-number">'+(j+1)+'</span>';
+  const ic=L.divIcon({className:'marker-shell',html:'<div class="marker'+cls+'">'+svg(p.icon)+num+'</div>',iconSize:[48,52],iconAnchor:[24,50]});
+  const m=L.marker(p.loc,{icon:ic,riseOnHover:true}).addTo(layer);
+  m.bindPopup(popupHTML(id,ix),{maxWidth:300,autoPan:true});
+  m.bindTooltip(p.name,{direction:'top',offset:[0,-45],className:'place-tip'});
+  m.on('click',()=>{if(ix>=0){selected=ix;renderList();renderDetail()}});
+  markerById[id]=m;
+ });
+ if(fit){
+  const bounds=L.latLngBounds(unique.map(id=>spots[id].loc));
+  if(bounds.isValid())map.fitBounds(bounds.pad(.17),{maxZoom:15,animate:false});
+ }
+ setTimeout(()=>map.invalidateSize(),80);
+}
+function setView(view){
+ mapView=view;
+ document.querySelectorAll('.viewbtn').forEach(b=>b.classList.toggle('active',b.dataset.view===view));
+ refreshMarkers(true);
+}
+document.querySelectorAll('.viewbtn').forEach(b=>b.onclick=()=>setView(b.dataset.view));
 function renderList(){const box=$('entries');box.innerHTML='';days[day].items.forEach((it,i)=>{const row=document.createElement('div');row.className='entry';const tm=document.createElement('div');tm.className='entry-time';tm.textContent=it[0];const tr=document.createElement('div');tr.className='track';tr.innerHTML='<span class="track-dot"></span>'+(i<days[day].items.length-1?'<span class="track-line"></span>':'');const b=document.createElement('button');b.className='stop'+(i===selected?' active':'');b.innerHTML='<span class="check '+(marks[day+'-'+i]?'yes':'')+'">'+(marks[day+'-'+i]?svg('check'):'')+'</span><span class="stop-body"><span class="stop-name"></span><span class="stop-desc"></span></span>';b.querySelector('.stop-name').textContent=it[1];b.querySelector('.stop-desc').textContent=it[2];b.onclick=()=>select(i);b.querySelector('.check').onclick=e=>{e.stopPropagation();toggle(i)};row.append(tm,tr,b);box.appendChild(row)})}
 function renderDetail(){const it=days[day].items[selected];$('spoticon').innerHTML=svg(it[3]);$('spotname').textContent=it[1];$('spottime').textContent=it[0];$('spotdesc').textContent=it[2];$('mapslink').href=mapurl(it[4]||it[1]);$('done').innerHTML=svg('check')+(marks[selectedKey()]?' Visited · undo':' Mark visited');$('done').onclick=()=>toggle(selected);$('more').hidden=it[4]!=='hotel';$('more').onclick=()=>openModal('hotel')}
 function renderJourney(){const names=day===3?['George Town','Butterworth','Padang Besar','Hat Yai']:['Hat Yai','Padang Besar','Butterworth','George Town'];const ico=day===3?['ship','train','ticket','train']:['train','ticket','train','ship'];$('journeytitle').textContent=day===3?'PENANG → HAT YAI · THE JOURNEY':'HAT YAI → PENANG · THE JOURNEY';$('journey').innerHTML=names.map((n,i)=>'<div class="j-stop"><i>'+svg(ico[i])+'</i><b>'+n+'</b></div>'+(i<names.length-1?'<div class="j-connector"></div>':'')).join('')}
-function render(){const d=days[day];$('daychip').textContent=d.chip;$('daytitle').textContent=d.title;$('daysub').textContent=d.sub;$('banner').textContent=d.banner;$('maptitle').textContent=d.maptitle;$('date').textContent=['25 OCT','26 OCT','27 OCT'][day-1];const c=d.items.filter((_,i)=>marks[day+'-'+i]).length;$('progressbar').style.width=100*c/d.items.length+'%';$('progresslabel').textContent=c+' / '+d.items.length+' stops completed';renderJourney();renderList();renderDetail();refreshMarkers()}
+function render(){const d=days[day];$('daychip').textContent=d.chip;$('daytitle').textContent=d.title;$('daysub').textContent=d.sub;$('banner').textContent=d.banner;$('maptitle').textContent=d.maptitle;$('date').textContent=['25 OCT','26 OCT','27 OCT'][day-1];const c=d.items.filter((_,i)=>marks[day+'-'+i]).length;$('progressbar').style.width=100*c/d.items.length+'%';$('progresslabel').textContent=c+' / '+d.items.length+' stops completed';renderJourney();renderList();renderDetail();refreshMarkers(true)}
 const hotelHTML=`<div class="facts"><div class="fact"><small>CHECK-IN</small><strong>25 Oct 2026 · After 15:00 MY</strong></div><div class="fact"><small>CHECK-OUT</small><strong>27 Oct 2026 · Before 12:00 MY</strong></div><div class="fact"><small>ROOM</small><strong>Standard Twin Magenta</strong></div><div class="fact"><small>GUESTS & BEDS</small><strong>2 guests · 2 single beds</strong></div></div>
 <h3>Loop on Leith George Town Penang Hotel</h3><p>29 Leith Street, 10200 George Town, Penang, Malaysia<br>Tel: +60 4-297 2222</p>
 <h3>Payment & hotel fee</h3><p>Paid according to e-receipt: <b>THB 2,156.03</b>.<br>Extra cultural heritage fee at hotel: <b>MYR 4</b> (approx. THB 32.98).<br>No meals included.</p>
