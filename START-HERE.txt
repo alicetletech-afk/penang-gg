@@ -1,0 +1,13 @@
+HELLO, PENANG — Interactive prototype
+
+1. Extract the ZIP completely.
+2. Open index.html in Chrome or Safari. Keep the assets folder and SVG beside index.html.
+3. Select a day; tap map pins to open a location dialog.
+4. Use North / Town / Island, +/- controls, mouse wheel, drag or touch pinch.
+
+The original itinerary, hotel, transport and checklist UI is retained. The map replaces the former fictional hand-drawn street map with the real Penang island outline and pre-rendered clay landmarks. Artwork is stylized; illustrated roads and buildings are not street-accurate navigation. For navigation use Google Maps buttons.
+
+Original HTML backed up as original.html.
+Map source and editable Blender source are included under source/.
+
+Not yet tested in a physical iPhone; do not treat this as production QA.

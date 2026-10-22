@@ -1,0 +1,1299 @@
+{
+  "project": "Hello, Penang.",
+  "dates": [
+    "2026-10-25",
+    "2026-10-26",
+    "2026-10-27"
+  ],
+  "timezone_note": "Malaysia UTC+8; Thailand UTC+7",
+  "coordinate_status": "Named landmarks and the Cheng Zheng Dim Sum location are cross-checked against the linked map/listing sources. Street-level coordinates remain approximate. Pixel positions are projected from this Preview 2 camera; refine after visual approval.",
+  "map_scope": "Full Penang Island; mainland excluded from interactive itinerary pins.",
+  "locations": [
+    {
+      "id": "loop",
+      "name": "Loop on Leith",
+      "lat_approx": 5.42034,
+      "lon_approx": 100.33369,
+      "days": [
+        1,
+        2,
+        3
+      ],
+      "category": "hotel",
+      "map_pin": true,
+      "optional": false,
+      "latitude": 5.42034,
+      "longitude": 100.33369,
+      "render_position_px": {
+        "x": 983,
+        "y": 793
+      },
+      "coordinate_status": "verified",
+      "coordinate_source": "https://mapcarta.com/W268561966",
+      "map_position": {
+        "x": 972.6,
+        "y": 464.8,
+        "projection": "equirectangular local"
+      },
+      "map_visibility": "itinerary",
+      "display_offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "landmark_asset": "assets/landmarks/loop.webp",
+      "geo_anchor": {
+        "latitude": 5.42034,
+        "longitude": 100.33369
+      },
+      "label_priority": 70,
+      "zoom_visibility": [
+        "full",
+        "north",
+        "georgetown"
+      ]
+    },
+    {
+      "id": "kek",
+      "name": "Kek Lok Si",
+      "lat_approx": 5.399895,
+      "lon_approx": 100.274239,
+      "days": [
+        1
+      ],
+      "category": "temple",
+      "map_pin": true,
+      "optional": false,
+      "latitude": 5.399895,
+      "longitude": 100.274239,
+      "render_position_px": {
+        "x": 442,
+        "y": 687
+      },
+      "coordinate_status": "verified",
+      "coordinate_source": "https://e-journal.uum.edu.my/index.php/jcia/en/article/download/26013/4874/98889",
+      "map_position": {
+        "x": 635.45,
+        "y": 580.44,
+        "projection": "equirectangular local"
+      },
+      "map_visibility": "itinerary",
+      "display_offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "landmark_asset": "assets/landmarks/kek.webp",
+      "geo_anchor": {
+        "latitude": 5.399895,
+        "longitude": 100.274239
+      },
+      "label_priority": 70,
+      "zoom_visibility": [
+        "full",
+        "north",
+        "georgetown"
+      ]
+    },
+    {
+      "id": "armenian",
+      "name": "Armenian Street",
+      "lat_approx": 5.4146,
+      "lon_approx": 100.3382,
+      "days": [
+        1
+      ],
+      "category": "heritage",
+      "map_pin": true,
+      "optional": false,
+      "latitude": 5.4146,
+      "longitude": 100.3382,
+      "render_position_px": {
+        "x": 986,
+        "y": 836
+      },
+      "coordinate_status": "approximate street/place position",
+      "map_position": {
+        "x": 998.18,
+        "y": 497.26,
+        "projection": "equirectangular local"
+      },
+      "map_visibility": "itinerary",
+      "display_offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "landmark_asset": "assets/landmarks/heritage.webp",
+      "geo_anchor": {
+        "latitude": 5.4146,
+        "longitude": 100.3382
+      },
+      "label_priority": 70,
+      "zoom_visibility": [
+        "full",
+        "north",
+        "georgetown"
+      ]
+    },
+    {
+      "id": "chulia",
+      "name": "Chulia Street",
+      "lat_approx": 5.4186,
+      "lon_approx": 100.3384,
+      "days": [
+        1
+      ],
+      "category": "heritage",
+      "map_pin": true,
+      "optional": false,
+      "latitude": 5.4186,
+      "longitude": 100.3384,
+      "render_position_px": {
+        "x": 1009,
+        "y": 817
+      },
+      "coordinate_status": "approximate street/place position",
+      "map_position": {
+        "x": 999.31,
+        "y": 474.64,
+        "projection": "equirectangular local"
+      },
+      "map_visibility": "itinerary",
+      "display_offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "landmark_asset": "assets/landmarks/heritage.webp",
+      "geo_anchor": {
+        "latitude": 5.4186,
+        "longitude": 100.3384
+      },
+      "label_priority": 70,
+      "zoom_visibility": [
+        "full",
+        "north",
+        "georgetown"
+      ]
+    },
+    {
+      "id": "kimberley",
+      "name": "Kimberley Street",
+      "lat_approx": 5.4158,
+      "lon_approx": 100.3335,
+      "days": [
+        1
+      ],
+      "category": "food",
+      "map_pin": true,
+      "optional": false,
+      "latitude": 5.4158,
+      "longitude": 100.3335,
+      "render_position_px": {
+        "x": 958,
+        "y": 814
+      },
+      "coordinate_status": "approximate street/place position",
+      "map_position": {
+        "x": 971.52,
+        "y": 490.47,
+        "projection": "equirectangular local"
+      },
+      "map_visibility": "itinerary",
+      "display_offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "landmark_asset": "assets/landmarks/heritage.webp",
+      "geo_anchor": {
+        "latitude": 5.4158,
+        "longitude": 100.3335
+      },
+      "label_priority": 70,
+      "zoom_visibility": [
+        "full",
+        "north",
+        "georgetown"
+      ]
+    },
+    {
+      "id": "chew",
+      "name": "Chew Jetty",
+      "lat_approx": 5.4125,
+      "lon_approx": 100.341,
+      "days": [
+        1
+      ],
+      "category": "optional",
+      "map_pin": false,
+      "optional": true,
+      "latitude": 5.4125,
+      "longitude": 100.341,
+      "render_position_px": {
+        "x": 995,
+        "y": 855
+      },
+      "coordinate_status": "approximate street/place position",
+      "map_position": {
+        "x": 1014.06,
+        "y": 509.14,
+        "projection": "equirectangular local"
+      },
+      "map_visibility": "optional",
+      "display_offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "landmark_asset": "assets/landmarks/chew.webp",
+      "geo_anchor": {
+        "latitude": 5.4125,
+        "longitude": 100.341
+      },
+      "label_priority": 0,
+      "zoom_visibility": []
+    },
+    {
+      "id": "dim_sum",
+      "name": "Cheng Zheng / Fu Er Dai Dim Sum",
+      "lat_approx": 5.41787,
+      "lon_approx": 100.33417,
+      "days": [
+        2
+      ],
+      "category": "food",
+      "map_pin": true,
+      "optional": false,
+      "latitude": 5.41787,
+      "longitude": 100.33417,
+      "render_position_px": {
+        "x": 974,
+        "y": 806
+      },
+      "coordinate_status": "verified",
+      "coordinate_source": "https://makansifu.com/venue/cheng-zheng-dim-sum",
+      "map_position": {
+        "x": 975.32,
+        "y": 478.77,
+        "projection": "equirectangular local"
+      },
+      "map_visibility": "itinerary",
+      "display_offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "landmark_asset": "assets/landmarks/dim_sum.webp",
+      "geo_anchor": {
+        "latitude": 5.41787,
+        "longitude": 100.33417
+      },
+      "label_priority": 70,
+      "zoom_visibility": [
+        "full",
+        "north",
+        "georgetown"
+      ]
+    },
+    {
+      "id": "floating",
+      "name": "Tanjung Bungah Floating Mosque",
+      "lat_approx": 5.46859,
+      "lon_approx": 100.27822,
+      "days": [
+        2
+      ],
+      "category": "mosque",
+      "map_pin": true,
+      "optional": false,
+      "latitude": 5.46859,
+      "longitude": 100.27822,
+      "render_position_px": {
+        "x": 833,
+        "y": 376
+      },
+      "coordinate_status": "verified",
+      "coordinate_source": "https://www.penang-traveltips.com/masjid-terapung-tanjung-bungah.htm",
+      "map_position": {
+        "x": 658.03,
+        "y": 191.88,
+        "projection": "equirectangular local"
+      },
+      "map_visibility": "itinerary",
+      "display_offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "landmark_asset": "assets/landmarks/floating.webp",
+      "geo_anchor": {
+        "latitude": 5.46859,
+        "longitude": 100.27822
+      },
+      "label_priority": 70,
+      "zoom_visibility": [
+        "full",
+        "north",
+        "georgetown"
+      ]
+    },
+    {
+      "id": "hin",
+      "name": "Hin Bus Depot",
+      "lat_approx": 5.4122,
+      "lon_approx": 100.32813,
+      "days": [
+        2
+      ],
+      "category": "arts",
+      "map_pin": true,
+      "optional": false,
+      "latitude": 5.4122,
+      "longitude": 100.32813,
+      "render_position_px": {
+        "x": 900,
+        "y": 813
+      },
+      "coordinate_status": "verified",
+      "coordinate_source": "https://www.penang-traveltips.com/hin-bus-depot.htm",
+      "map_position": {
+        "x": 941.07,
+        "y": 510.84,
+        "projection": "equirectangular local"
+      },
+      "map_visibility": "itinerary",
+      "display_offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "landmark_asset": "assets/landmarks/hin.webp",
+      "geo_anchor": {
+        "latitude": 5.4122,
+        "longitude": 100.32813
+      },
+      "label_priority": 70,
+      "zoom_visibility": [
+        "full",
+        "north",
+        "georgetown"
+      ]
+    },
+    {
+      "id": "ferry_museum",
+      "name": "Penang Ferry Museum (exterior)",
+      "lat_approx": 5.41459,
+      "lon_approx": 100.3435,
+      "days": [
+        2
+      ],
+      "category": "waterfront",
+      "map_pin": true,
+      "optional": false,
+      "latitude": 5.41459,
+      "longitude": 100.3435,
+      "render_position_px": {
+        "x": 1025,
+        "y": 854
+      },
+      "coordinate_status": "verified",
+      "coordinate_source": "https://mapcarta.com/W1434321181",
+      "map_position": {
+        "x": 1028.24,
+        "y": 497.32,
+        "projection": "equirectangular local"
+      },
+      "map_visibility": "itinerary",
+      "display_offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "landmark_asset": "assets/landmarks/ferry_museum.webp",
+      "geo_anchor": {
+        "latitude": 5.41459,
+        "longitude": 100.3435
+      },
+      "label_priority": 70,
+      "zoom_visibility": [
+        "full",
+        "north",
+        "georgetown"
+      ]
+    },
+    {
+      "id": "townhall",
+      "name": "Penang Town Hall & City Hall",
+      "lat_approx": 5.42115,
+      "lon_approx": 100.34112,
+      "days": [
+        2
+      ],
+      "category": "colonial",
+      "map_pin": true,
+      "optional": false,
+      "latitude": 5.42115,
+      "longitude": 100.34112,
+      "render_position_px": {
+        "x": 1042,
+        "y": 815
+      },
+      "coordinate_status": "verified",
+      "coordinate_source": "https://mapcarta.com/W160440794",
+      "map_position": {
+        "x": 1014.74,
+        "y": 460.21,
+        "projection": "equirectangular local"
+      },
+      "map_visibility": "itinerary",
+      "display_offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "landmark_asset": "assets/landmarks/townhall.webp",
+      "geo_anchor": {
+        "latitude": 5.42115,
+        "longitude": 100.34112
+      },
+      "label_priority": 70,
+      "zoom_visibility": [
+        "full",
+        "north",
+        "georgetown"
+      ]
+    },
+    {
+      "id": "gurney",
+      "name": "Gurney Bay",
+      "lat_approx": 5.432858,
+      "lon_approx": 100.319143,
+      "days": [
+        2
+      ],
+      "category": "waterfront",
+      "map_pin": true,
+      "optional": false,
+      "latitude": 5.432858,
+      "longitude": 100.319143,
+      "render_position_px": {
+        "x": 943,
+        "y": 684
+      },
+      "coordinate_status": "verified",
+      "coordinate_source": "https://e-journal.uum.edu.my/index.php/jcia/en/article/download/26013/4874/98889",
+      "map_position": {
+        "x": 890.11,
+        "y": 393.99,
+        "projection": "equirectangular local"
+      },
+      "map_visibility": "itinerary",
+      "display_offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "landmark_asset": "assets/landmarks/gurney.webp",
+      "geo_anchor": {
+        "latitude": 5.432858,
+        "longitude": 100.319143
+      },
+      "label_priority": 70,
+      "zoom_visibility": [
+        "full",
+        "north",
+        "georgetown"
+      ]
+    },
+    {
+      "id": "ferry_terminal",
+      "name": "Raja Tun Uda Ferry Terminal",
+      "lat_approx": 5.41363,
+      "lon_approx": 100.34338,
+      "days": [
+        3
+      ],
+      "category": "transport",
+      "map_pin": true,
+      "optional": false,
+      "latitude": 5.41363,
+      "longitude": 100.34338,
+      "render_position_px": {
+        "x": 1019,
+        "y": 858
+      },
+      "coordinate_status": "verified",
+      "coordinate_source": "https://mapcarta.com/25999516",
+      "map_position": {
+        "x": 1027.55,
+        "y": 502.75,
+        "projection": "equirectangular local"
+      },
+      "map_visibility": "itinerary",
+      "display_offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "landmark_asset": "assets/landmarks/ferry_terminal.webp",
+      "geo_anchor": {
+        "latitude": 5.41363,
+        "longitude": 100.34338
+      },
+      "label_priority": 70,
+      "zoom_visibility": [
+        "full",
+        "north",
+        "georgetown"
+      ]
+    },
+    {
+      "id": "butterworth",
+      "name": "Butterworth Ferry / KTM",
+      "lat_approx": 5.3949,
+      "lon_approx": 100.363,
+      "days": [
+        1,
+        3
+      ],
+      "category": "transport",
+      "map_pin": false,
+      "optional": false,
+      "latitude": null,
+      "longitude": null,
+      "render_position_px": null,
+      "coordinate_status": "unverified; itinerary-level location only",
+      "map_position": null,
+      "geo_anchor": null,
+      "display_offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "label_priority": 0,
+      "zoom_visibility": []
+    },
+    {
+      "id": "padang",
+      "name": "Padang Besar Station",
+      "lat_approx": 6.661,
+      "lon_approx": 100.323,
+      "days": [
+        1,
+        3
+      ],
+      "category": "transport",
+      "map_pin": false,
+      "optional": false,
+      "latitude": null,
+      "longitude": null,
+      "render_position_px": null,
+      "coordinate_status": "unverified; itinerary-level location only",
+      "map_position": null,
+      "geo_anchor": null,
+      "display_offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "label_priority": 0,
+      "zoom_visibility": []
+    },
+    {
+      "id": "hatyai",
+      "name": "Hat Yai Junction",
+      "lat_approx": 7.0048,
+      "lon_approx": 100.468,
+      "days": [
+        1,
+        3
+      ],
+      "category": "transport",
+      "map_pin": false,
+      "optional": false,
+      "latitude": null,
+      "longitude": null,
+      "render_position_px": null,
+      "coordinate_status": "unverified; itinerary-level location only",
+      "map_position": null,
+      "geo_anchor": null,
+      "display_offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "label_priority": 0,
+      "zoom_visibility": []
+    }
+  ],
+  "days": {
+    "1": [
+      {
+        "time": "14:00",
+        "place": "loop"
+      },
+      {
+        "time": "14:20",
+        "transport": "Grab to Kek Lok Si"
+      },
+      {
+        "time": "14:50–16:30",
+        "place": "kek"
+      },
+      {
+        "time": "17:10–18:30",
+        "place": "armenian"
+      },
+      {
+        "time": "18:30–19:15",
+        "place": "chulia"
+      },
+      {
+        "time": "19:15+",
+        "place": "kimberley"
+      }
+    ],
+    "2": [
+      {
+        "time": "09:30",
+        "place": "dim_sum"
+      },
+      {
+        "time": "11:00",
+        "place": "floating"
+      },
+      {
+        "time": "12:30",
+        "place": "hin"
+      },
+      {
+        "time": "14:30",
+        "place": "ferry_museum"
+      },
+      {
+        "time": "15:00",
+        "place": "townhall"
+      },
+      {
+        "time": "17:30",
+        "place": "gurney"
+      }
+    ],
+    "3": [
+      {
+        "time": "08:30",
+        "activity": "Breakfast near hotel"
+      },
+      {
+        "time": "09:30",
+        "place": "loop",
+        "activity": "Checkout"
+      },
+      {
+        "time": "10:20",
+        "place": "ferry_terminal"
+      },
+      {
+        "time": "12:35",
+        "place": "butterworth",
+        "activity": "KTM to Padang Besar"
+      },
+      {
+        "time": "14:26 MY",
+        "place": "padang"
+      },
+      {
+        "time": "16:40 MY",
+        "activity": "SRT 950 departure"
+      },
+      {
+        "time": "16:25 TH",
+        "place": "hatyai",
+        "activity": "Arrival"
+      }
+    ]
+  },
+  "journey": {
+    "day1": "07:20 TH SRT45 Hat Yai → 08:05 TH / 09:05 MY Padang Besar → 10:35 MY KTM → 12:26 MY Butterworth → ferry George Town",
+    "day3": "12:35 MY KTM Butterworth → 14:26 MY Padang Besar; 16:40 MY / 15:40 TH SRT950 → 16:25 TH Hat Yai",
+    "warning": "Train and ferry times require confirmation before travel."
+  },
+  "render_size_px": {
+    "width": 1800,
+    "height": 1400
+  },
+  "projection": "Orthographic camera projection; preview positions",
+  "map_projection": {
+    "name": "Local equirectangular",
+    "latitude_origin": 5.3786999,
+    "longitude_origin": 100.2675053,
+    "cos_latitude": 0.99559688,
+    "scale": 0.05116913758618499,
+    "pixel_x_origin": 597.2643391901693,
+    "pixel_y_origin": 700.3214902729427,
+    "source": "OSM-derived Penang main-island polygon"
+  },
+  "map_presentation": {
+    "coordinate_system": "map_position in the retained local equirectangular projection",
+    "assets": {
+      "floating": {
+        "anchor_location_ids": [
+          "floating"
+        ],
+        "asset": "assets/landmarks/floating.webp",
+        "display_offset_px": {
+          "x": -2,
+          "y": 0
+        },
+        "display_offsets_by_view": {},
+        "size_factors_by_view": {},
+        "asset_size_px": 112,
+        "label_priority": 100,
+        "zoom_visibility": [
+          "full",
+          "north",
+          "georgetown",
+          "mobile_georgetown",
+          "mobile_initial"
+        ]
+      },
+      "kek": {
+        "anchor_location_ids": [
+          "kek"
+        ],
+        "asset": "assets/landmarks/kek.webp",
+        "display_offset_px": {
+          "x": -2,
+          "y": 0
+        },
+        "display_offsets_by_view": {},
+        "size_factors_by_view": {},
+        "asset_size_px": 118,
+        "label_priority": 100,
+        "zoom_visibility": [
+          "full",
+          "north",
+          "georgetown",
+          "mobile_georgetown",
+          "mobile_initial"
+        ]
+      },
+      "gurney": {
+        "anchor_location_ids": [
+          "gurney"
+        ],
+        "asset": "assets/landmarks/gurney.webp",
+        "display_offset_px": {
+          "x": 0,
+          "y": -8
+        },
+        "display_offsets_by_view": {},
+        "size_factors_by_view": {},
+        "asset_size_px": 96,
+        "label_priority": 90,
+        "zoom_visibility": [
+          "full",
+          "north",
+          "mobile_initial"
+        ]
+      },
+      "loop": {
+        "anchor_location_ids": [
+          "loop"
+        ],
+        "asset": "assets/landmarks/loop.webp",
+        "display_offset_px": {
+          "x": -18,
+          "y": -22
+        },
+        "display_offsets_by_view": {
+          "georgetown": {
+            "x": -7,
+            "y": -9
+          },
+          "mobile_georgetown": {
+            "x": -5,
+            "y": -8
+          },
+          "mobile_georgetown_430": {
+            "x": -5,
+            "y": -8
+          }
+        },
+        "size_factors_by_view": {
+          "georgetown": 0.9,
+          "mobile_georgetown": 0.68,
+          "mobile_georgetown_430": 0.68
+        },
+        "asset_size_px": 70,
+        "label_priority": 80,
+        "zoom_visibility": [
+          "georgetown",
+          "mobile_georgetown",
+          "mobile_georgetown_430"
+        ]
+      },
+      "heritage": {
+        "anchor_location_ids": [
+          "armenian",
+          "chulia",
+          "kimberley"
+        ],
+        "asset": "assets/landmarks/heritage.webp",
+        "display_offset_px": {
+          "x": -16,
+          "y": 0
+        },
+        "display_offsets_by_view": {
+          "georgetown": {
+            "x": -3,
+            "y": 0
+          },
+          "mobile_georgetown": {
+            "x": -14,
+            "y": 18
+          },
+          "mobile_georgetown_430": {
+            "x": -14,
+            "y": 18
+          }
+        },
+        "size_factors_by_view": {
+          "north": 0.8,
+          "georgetown": 0.9,
+          "mobile_georgetown": 0.42,
+          "mobile_georgetown_430": 0.42
+        },
+        "asset_size_px": 78,
+        "label_priority": 100,
+        "zoom_visibility": [
+          "full",
+          "north",
+          "georgetown",
+          "mobile_georgetown",
+          "mobile_georgetown_430",
+          "mobile_initial"
+        ]
+      },
+      "townhall": {
+        "anchor_location_ids": [
+          "townhall"
+        ],
+        "asset": "assets/landmarks/townhall.webp",
+        "display_offset_px": {
+          "x": 14,
+          "y": -18
+        },
+        "display_offsets_by_view": {
+          "georgetown": {
+            "x": 5,
+            "y": -7
+          },
+          "mobile_georgetown": {
+            "x": 12,
+            "y": -12
+          },
+          "mobile_georgetown_430": {
+            "x": 12,
+            "y": -12
+          }
+        },
+        "size_factors_by_view": {
+          "north": 0.7,
+          "georgetown": 0.85,
+          "mobile_georgetown": 0.65,
+          "mobile_georgetown_430": 0.65
+        },
+        "asset_size_px": 86,
+        "label_priority": 95,
+        "zoom_visibility": [
+          "north",
+          "georgetown",
+          "mobile_georgetown",
+          "mobile_georgetown_430"
+        ]
+      },
+      "hin": {
+        "anchor_location_ids": [
+          "hin"
+        ],
+        "asset": "assets/landmarks/hin.webp",
+        "display_offset_px": {
+          "x": -6,
+          "y": 0
+        },
+        "display_offsets_by_view": {
+          "georgetown": {
+            "x": -8,
+            "y": 9
+          },
+          "mobile_georgetown": {
+            "x": -9,
+            "y": 18
+          },
+          "mobile_georgetown_430": {
+            "x": -9,
+            "y": 18
+          }
+        },
+        "size_factors_by_view": {
+          "georgetown": 0.9,
+          "mobile_georgetown": 0.6,
+          "mobile_georgetown_430": 0.6
+        },
+        "asset_size_px": 82,
+        "label_priority": 85,
+        "zoom_visibility": [
+          "georgetown",
+          "mobile_georgetown",
+          "mobile_georgetown_430"
+        ]
+      },
+      "dim_sum": {
+        "anchor_location_ids": [
+          "dim_sum"
+        ],
+        "asset": "assets/landmarks/dim_sum.webp",
+        "display_offset_px": {
+          "x": 18,
+          "y": 43
+        },
+        "display_offsets_by_view": {
+          "georgetown": {
+            "x": -15,
+            "y": 17
+          },
+          "mobile_georgetown": {
+            "x": 5,
+            "y": 41
+          },
+          "mobile_georgetown_430": {
+            "x": 5,
+            "y": 41
+          }
+        },
+        "size_factors_by_view": {
+          "georgetown": 0.45,
+          "mobile_georgetown": 0.45,
+          "mobile_georgetown_430": 0.45
+        },
+        "asset_size_px": 54,
+        "label_priority": 65,
+        "zoom_visibility": [
+          "georgetown",
+          "mobile_georgetown",
+          "mobile_georgetown_430"
+        ]
+      },
+      "ferry_museum": {
+        "anchor_location_ids": [
+          "ferry_museum"
+        ],
+        "asset": "assets/landmarks/ferry_museum.webp",
+        "display_offset_px": {
+          "x": -18,
+          "y": -8
+        },
+        "display_offsets_by_view": {
+          "georgetown": {
+            "x": -8,
+            "y": -6
+          },
+          "mobile_georgetown": {
+            "x": -5,
+            "y": -2
+          },
+          "mobile_georgetown_430": {
+            "x": -5,
+            "y": -2
+          }
+        },
+        "size_factors_by_view": {
+          "georgetown": 0.78,
+          "mobile_georgetown": 0.45,
+          "mobile_georgetown_430": 0.45
+        },
+        "asset_size_px": 58,
+        "label_priority": 85,
+        "zoom_visibility": [
+          "georgetown",
+          "mobile_georgetown",
+          "mobile_georgetown_430"
+        ]
+      },
+      "ferry_terminal": {
+        "anchor_location_ids": [
+          "ferry_terminal"
+        ],
+        "asset": "assets/landmarks/ferry_terminal.webp",
+        "display_offset_px": {
+          "x": -16,
+          "y": 6
+        },
+        "display_offsets_by_view": {
+          "georgetown": {
+            "x": -13,
+            "y": 7
+          },
+          "mobile_georgetown": {
+            "x": -18,
+            "y": 15
+          },
+          "mobile_georgetown_430": {
+            "x": -18,
+            "y": 15
+          }
+        },
+        "size_factors_by_view": {
+          "georgetown": 0.72,
+          "mobile_georgetown": 0.45,
+          "mobile_georgetown_430": 0.45
+        },
+        "asset_size_px": 58,
+        "label_priority": 90,
+        "zoom_visibility": [
+          "georgetown",
+          "mobile_georgetown",
+          "mobile_georgetown_430"
+        ]
+      },
+      "chew": {
+        "anchor_location_ids": [
+          "chew"
+        ],
+        "asset": "assets/landmarks/chew.webp",
+        "display_offset_px": {
+          "x": -5,
+          "y": 4
+        },
+        "display_offsets_by_view": {
+          "georgetown": {
+            "x": -7,
+            "y": 18
+          },
+          "mobile_georgetown": {
+            "x": -25,
+            "y": 38
+          },
+          "mobile_georgetown_430": {
+            "x": -25,
+            "y": 38
+          }
+        },
+        "size_factors_by_view": {
+          "georgetown": 0.8,
+          "mobile_georgetown": 0.48,
+          "mobile_georgetown_430": 0.48
+        },
+        "asset_size_px": 76,
+        "label_priority": 75,
+        "zoom_visibility": [
+          "georgetown",
+          "mobile_georgetown",
+          "mobile_georgetown_430"
+        ]
+      }
+    },
+    "regions": [
+      {
+        "id": "george_town",
+        "text": "George Town",
+        "latitude": 5.419,
+        "longitude": 100.329,
+        "priority": 100,
+        "zoom": [
+          "full",
+          "north"
+        ]
+      },
+      {
+        "id": "tanjung_bungah",
+        "text": "Tanjung Bungah",
+        "latitude": 5.4675,
+        "longitude": 100.295,
+        "priority": 95,
+        "zoom": [
+          "full",
+          "north"
+        ]
+      },
+      {
+        "id": "air_itam",
+        "text": "Air Itam",
+        "latitude": 5.398,
+        "longitude": 100.276,
+        "priority": 95,
+        "zoom": [
+          "full",
+          "north"
+        ]
+      },
+      {
+        "id": "penang_hill",
+        "text": "Penang Hill",
+        "latitude": 5.423,
+        "longitude": 100.272,
+        "priority": 90,
+        "zoom": [
+          "full",
+          "north"
+        ]
+      },
+      {
+        "id": "bayan_lepas",
+        "text": "Bayan Lepas",
+        "latitude": 5.291,
+        "longitude": 100.282,
+        "priority": 80,
+        "zoom": [
+          "full"
+        ]
+      }
+    ],
+    "detail_label_visibility": {
+      "full": [],
+      "north": [
+        "floating",
+        "gurney",
+        "kek",
+        "hin"
+      ],
+      "georgetown": [
+        "loop",
+        "armenian",
+        "chulia",
+        "kimberley",
+        "townhall",
+        "hin",
+        "ferry_museum",
+        "ferry_terminal",
+        "chew",
+        "dim_sum"
+      ],
+      "mobile_georgetown": [
+        "loop",
+        "armenian",
+        "chulia",
+        "kimberley",
+        "townhall",
+        "hin",
+        "dim_sum",
+        "ferry_museum",
+        "ferry_terminal",
+        "chew"
+      ],
+      "mobile_georgetown_430": [
+        "loop",
+        "armenian",
+        "chulia",
+        "kimberley",
+        "townhall",
+        "hin",
+        "dim_sum",
+        "ferry_museum",
+        "ferry_terminal",
+        "chew"
+      ],
+      "mobile_initial": [
+        "floating",
+        "kek",
+        "gurney",
+        "armenian"
+      ]
+    },
+    "viewports": {
+      "full": {
+        "box_map_px": [
+          0,
+          0,
+          1120,
+          1500
+        ],
+        "output_px": [
+          1120,
+          1500
+        ],
+        "scale_policy": "uniform geographic projection + viewport fit"
+      },
+      "north": {
+        "box_map_px": [
+          450,
+          90,
+          1120,
+          720
+        ],
+        "output_px": [
+          1120,
+          1053
+        ],
+        "scale_policy": "uniform geographic projection + viewport fit"
+      },
+      "georgetown": {
+        "box_map_px": [
+          875,
+          410,
+          1065,
+          600
+        ],
+        "output_px": [
+          1200,
+          1200
+        ],
+        "scale_policy": "uniform geographic projection + viewport fit"
+      },
+      "mobile_georgetown": {
+        "box_map_px": [
+          900,
+          390,
+          1060,
+          700
+        ],
+        "output_px": [
+          390,
+          756
+        ],
+        "scale_policy": "uniform geographic projection + viewport fit"
+      },
+      "mobile_georgetown_430": {
+        "box_map_px": [
+          900,
+          390,
+          1060,
+          704
+        ],
+        "output_px": [
+          430,
+          844
+        ],
+        "scale_policy": "uniform geographic projection + viewport fit"
+      },
+      "mobile_initial": {
+        "box_map_px": [
+          520,
+          90,
+          1080,
+          1175
+        ],
+        "output_px": [
+          390,
+          756
+        ],
+        "scale_policy": "uniform geographic projection + viewport fit"
+      },
+      "fit_mobile": {
+        "box_map_px": [
+          0,
+          0,
+          1120,
+          1500
+        ],
+        "output_px": [
+          390,
+          844
+        ],
+        "scale_policy": "uniform geographic projection + viewport fit"
+      }
+    },
+    "label_policy": {
+      "full": "major regions only",
+      "north": "major regions and selected landmark names",
+      "georgetown": "collision-aware destination and district labels",
+      "minimum_pin_target_px": 44
+    },
+    "zoom_scale_policy": {
+      "full": 1.05,
+      "north": 0.88,
+      "georgetown": 0.24,
+      "mobile_georgetown": 0.55,
+      "mobile_georgetown_430": 0.55,
+      "mobile_initial": 0.82,
+      "units": "multiplier on projected asset size; geography remains fixed"
+    }
+  }
+}
